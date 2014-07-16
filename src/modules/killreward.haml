@@ -41,3 +41,23 @@
                             </filter>
                             <item amount="32">snow ball</item>
                         </killreward>
+                        
+                    ##### [Capture Rule](id:capture_rule)
+                    The `<kill-streak>` filter can be used to specify a certain number of kills required to receive the reward, and can accept the attributes: `min`, `max` and `count`
+                    
+                    * `min` The player must have at least this number of kills to receive the reward.
+                    * `max` The player must have at most this number of kills to receive the reward.
+                    * `count` The player must have exactly this number of kills to receive the reward.
+
+                    <br/>
+                    Example
+                        <!-- Kill Reward from U-Boat: König XML -->
+                        <killreward>
+                            <kill-streak count="3"/>
+                            <item amount="1">golden apple</item>
+                        </killreward>
+                        <killreward>
+                            <kill-streak min="4" max="10"/>
+                            <!--  matches players with exactly 7 kills  -->
+                            <item amount="1" name="`4Health pack" lore="`7Just in time!" damage="16421">potion</item>
+                        </killreward>
